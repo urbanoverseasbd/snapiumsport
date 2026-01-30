@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en"><head>
 <meta charset="utf-8"/>
@@ -96,6 +97,14 @@
         #gallery-thumbnails button:hover img {
             transform: scale(1.1);
         }
+
+        /* Hero Slider Responsive Styles */
+        #slider-container {
+            width: 100%;
+            max-width: 1000px;
+            aspect-ratio: 9/16;
+            margin: 0 auto;
+        }
     </style>
 </head>
 <body class="font-display overflow-x-hidden antialiased selection:bg-accent-teal selection:text-white">
@@ -156,26 +165,18 @@
                     </button>
 </div>
 </div>
-<div class="w-full max-w-6xl aspect-[21/9] relative rounded-3xl overflow-hidden premium-border soft-shadow group select-none bg-white p-2">
-<div id="slider-container" class="relative w-full h-full rounded-2xl overflow-hidden">
-<div id="after-image" class="absolute inset-0 bg-cover bg-center transition-opacity duration-1000"></div>
-<div id="before-container" class="absolute top-0 left-0 bottom-0 w-1/2 overflow-hidden border-r border-white/40 transition-all duration-100">
-<div id="before-image" class="absolute inset-0 w-[200%] h-full transition-opacity duration-1000">
-<div class="w-full h-full bg-cover bg-center flex items-center justify-center bg-slate-100"></div>
-</div>
-<div class="absolute bottom-8 left-8 px-4 py-2 rounded-lg bg-white/90 backdrop-blur-md border border-black/5 text-xs font-bold text-slate-600 uppercase tracking-widest">
+<div class="w-full flex justify-center">
+<div class="relative max-w-6xl w-full rounded-3xl overflow-hidden premium-border soft-shadow group select-none bg-white p-2 mx-auto">
+<div id="slider-container" class="relative w-full rounded-2xl overflow-hidden bg-slate-100">
+<div id="main-image" class="absolute inset-0 bg-cover bg-center transition-opacity duration-1000"></div>
+<div class="absolute bottom-4 sm:bottom-6 md:bottom-8 left-4 sm:left-6 md:left-8 px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg bg-white/90 backdrop-blur-md border border-black/5 text-[10px] sm:text-xs font-bold text-slate-600 uppercase tracking-widest">
                             Raw Input
                         </div>
-</div>
-<div id="slider-handle" class="absolute top-0 bottom-0 left-1/2 w-1 bg-white shadow-xl -translate-x-1/2 z-20 flex items-center justify-center cursor-ew-resize">
-<div class="size-12 rounded-full bg-white border border-slate-200 flex items-center justify-center shadow-2xl transition-transform hover:scale-110">
-<span class="material-symbols-outlined text-primary text-[24px]">unfold_more</span>
-</div>
-</div>
-<div class="absolute bottom-8 right-8 px-4 py-2 rounded-lg bg-primary/90 backdrop-blur-md text-xs font-bold text-white uppercase tracking-widest z-10">
+<div class="absolute bottom-4 sm:bottom-6 md:bottom-8 right-4 sm:right-6 md:right-8 px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg bg-primary/90 backdrop-blur-md text-[10px] sm:text-xs font-bold text-white uppercase tracking-widest z-10">
                         Expert Retouching
                     </div>
-<div id="slide-indicators" class="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-2 z-20">
+<div id="slide-indicators" class="absolute bottom-4 sm:bottom-6 md:bottom-8 left-1/2 -translate-x-1/2 flex gap-1.5 sm:gap-2 z-20">
+</div>
 </div>
 </div>
 </div>
@@ -216,7 +217,7 @@ data-service-title="E-commerce Packshots"
 data-service-image="https://lh3.googleusercontent.com/aida-public/AB6AXuCGoBHxjD60S-cknZSEoWx7BeIDsk_VbadO7FFrkUYyvQ5wBEcUz7gugh7cgWre-x4mD5e7m1F3vD4k8DlJRdaoaIMSqkJ3NLbhwhsn-lCeSRz9T_Cwl1YnGcMgNJUGlxfRyTUs8UeG0sZdRP2WHeAivEq9ip1eL2ot2svnZo5bWXHLAx4TnfU6BTx_B01flznH0ri2LcfRn97-wkTWkmQ17rriJfK6-vIWlh-MlJAZMPgEG2HjljMh6DnWnowYZRSe7my_PxV6Y020"
 data-service-description="<h3 class='text-xl font-bold text-slate-900 mb-4'>Professional E-commerce Image Editing</h3><p class='text-slate-600 leading-relaxed mb-4'>Our E-commerce Packshots service delivers perfectly optimized product images that drive conversions. We combine advanced AI technology with expert human retouching to ensure every detail is flawless.</p><h4 class='text-lg font-bold text-slate-900 mb-3'>What We Deliver:</h4><ul class='space-y-2 mb-6'><li class='flex items-start gap-2'><span class='material-symbols-outlined text-primary text-[20px] mt-0.5'>check_circle</span><span>Professional color correction and white balance adjustment</span></li><li class='flex items-start gap-2'><span class='material-symbols-outlined text-primary text-[20px] mt-0.5'>check_circle</span><span>Precise background removal and replacement</span></li><li class='flex items-start gap-2'><span class='material-symbols-outlined text-primary text-[20px] mt-0.5'>check_circle</span><span>Shadow and reflection enhancement for depth</span></li><li class='flex items-start gap-2'><span class='material-symbols-outlined text-primary text-[20px] mt-0.5'>check_circle</span><span>Consistent lighting across all product images</span></li><li class='flex items-start gap-2'><span class='material-symbols-outlined text-primary text-[20px] mt-0.5'>check_circle</span><span>High-resolution output for all e-commerce platforms</span></li></ul><p class='text-slate-600 leading-relaxed'>Perfect for Amazon, Shopify, Magento, and all major e-commerce platforms. 24-hour turnaround available for urgent projects.</p>"
 data-service-tags='["Color Correction", "Background", "Shadows", "Lighting"]'>
-<div class="relative w-full h-48 mb-8 rounded-2xl overflow-hidden bg-slate-50 border border-slate-100">
+<div class="relative w-full mb-8 rounded-2xl overflow-hidden bg-slate-50 border border-slate-100" style="aspect-ratio: 1/1;">
 <img alt="E-commerce Packshots" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGoBHxjD60S-cknZSEoWx7BeIDsk_VbadO7FFrkUYyvQ5wBEcUz7gugh7cgWre-x4mD5e7m1F3vD4k8DlJRdaoaIMSqkJ3NLbhwhsn-lCeSRz9T_Cwl1YnGcMgNJUGlxfRyTUs8UeG0sZdRP2WHeAivEq9ip1eL2ot2svnZo5bWXHLAx4TnfU6BTx_B01flznH0ri2LcfRn97-wkTWkmQ17rriJfK6-vIWlh-MlJAZMPgEG2HjljMh6DnWnowYZRSe7my_PxV6Y020"/>
 <div class="absolute bottom-4 left-4 flex gap-2">
 <span class="bg-white/90 backdrop-blur px-2 py-1 rounded text-[10px] font-bold text-slate-400 uppercase tracking-tighter">Raw</span>
@@ -236,7 +237,7 @@ data-service-title="Ghost Mannequin"
 data-service-image="https://lh3.googleusercontent.com/aida-public/AB6AXuBMktwpgzMtOm_vzpd354vslKkcOlnwZI7zi2d3oIkPCPUin6ieqpzsYipYOYScO-YGxHklq0IZTqCLfqeS2cGkBMD5tX77JamjTRTg9BHNQufrELarq5lgDckUimtzl-bWEm1dMttBJVk1yGqZiYxXsYUf2NSfzEwVv5evzCXDIH6ardqeJFJsHQRwW0XSjZXupLZyvHInogIV3CfsCxrOhytA-mCND7vhjR31uESQpTtmZ8U-zLodBdqTLAlpyjdR5eF2pwNS5lq0"
 data-service-description="<h3 class='text-xl font-bold text-slate-900 mb-4'>Professional Ghost Mannequin Services</h3><p class='text-slate-600 leading-relaxed mb-4'>Transform flat clothing shots into stunning 3D-like product displays. Our Ghost Mannequin technique creates the illusion of an invisible model, showcasing your garments in their natural form.</p><h4 class='text-lg font-bold text-slate-900 mb-3'>Our Expertise Includes:</h4><ul class='space-y-2 mb-6'><li class='flex items-start gap-2'><span class='material-symbols-outlined text-primary text-[20px] mt-0.5'>check_circle</span><span>Seamless neck joins and invisible mannequin removal</span></li><li class='flex items-start gap-2'><span class='material-symbols-outlined text-primary text-[20px] mt-0.5'>check_circle</span><span>Realistic 3D hollow effects and depth enhancement</span></li><li class='flex items-start gap-2'><span class='material-symbols-outlined text-primary text-[20px] mt-0.5'>check_circle</span><span>Wrinkle removal and fabric smoothing</span></li><li class='flex items-start gap-2'><span class='material-symbols-outlined text-primary text-[20px] mt-0.5'>check_circle</span><span>Color matching and consistency across all angles</span></li><li class='flex items-start gap-2'><span class='material-symbols-outlined text-primary text-[20px] mt-0.5'>check_circle</span><span>Inside label editing and brand consistency</span></li></ul><p class='text-slate-600 leading-relaxed'>Ideal for fashion retailers, clothing brands, and online apparel stores seeking to showcase products with a professional, consistent look.</p>"
 data-service-tags='["3D Effect", "Neck Join", "Hollow", "Fabric"]'>
-<div class="relative w-full h-48 mb-8 rounded-2xl overflow-hidden bg-slate-50 border border-slate-100">
+<div class="relative w-full mb-8 rounded-2xl overflow-hidden bg-slate-50 border border-slate-100" style="aspect-ratio: 1/1;">
 <img alt="Ghost Mannequin" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMktwpgzMtOm_vzpd354vslKkcOlnwZI7zi2d3oIkPCPUin6ieqpzsYipYOYScO-YGxHklq0IZTqCLfqeS2cGkBMD5tX77JamjTRTg9BHNQufrELarq5lgDckUimtzl-bWEm1dMttBJVk1yGqZiYxXsYUf2NSfzEwVv5evzCXDIH6ardqeJFJsHQRwW0XSjZXupLZyvHInogIV3CfsCxrOhytA-mCND7vhjR31uESQpTtmZ8U-zLodBdqTLAlpyjdR5eF2pwNS5lq0"/>
 </div>
 <h3 class="text-xl font-bold text-slate-900 mb-3">Ghost Mannequin</h3>
@@ -252,7 +253,7 @@ data-service-title="AI Fashion Models"
 data-service-image="https://lh3.googleusercontent.com/aida-public/AB6AXuA9P2mfIXpUriZ0y9zBCmdoLRbtWBTLO6_OoyB714KNLMPhofdUF2Q9TAv96IwVRThOPd71Y7ceq2bJAz6IfHe2Ecjl-bIvgPHJRyMR5wT80bmys3EzWqFb66DvjZwbSwIGz0ecPlx4SwWZdAb4ck23aa9TtGu4ev7B-mJOk3nC19EFeIX79gkI9N6K_FEvpjSbSiAz1FV60CrPsCsao2oJiAYCvtPqJMwh3957NWJc0hzO5f4nx3F3XuBQwWoeiD2F7bxewZFZdGG0"
 data-service-description="<h3 class='text-xl font-bold text-slate-900 mb-4'>AI-Powered Virtual Fashion Models</h3><p class='text-slate-600 leading-relaxed mb-4'>Revolutionize your fashion photography with cutting-edge AI technology. We place your garments on photorealistic virtual models, eliminating the need for expensive photo shoots.</p><h4 class='text-lg font-bold text-slate-900 mb-3'>Key Features:</h4><ul class='space-y-2 mb-6'><li class='flex items-start gap-2'><span class='material-symbols-outlined text-primary text-[20px] mt-0.5'>check_circle</span><span>Diverse model database with various ethnicities and body types</span></li><li class='flex items-start gap-2'><span class='material-symbols-outlined text-primary text-[20px] mt-0.5'>check_circle</span><span>Realistic fabric draping and movement simulation</span></li><li class='flex items-start gap-2'><span class='material-symbols-outlined text-primary text-[20px] mt-0.5'>check_circle</span><span>Custom poses and facial expressions</span></li><li class='flex items-start gap-2'><span class='material-symbols-outlined text-primary text-[20px] mt-0.5'>check_circle</span><span>Instant scalability for large catalogs</span></li><li class='flex items-start gap-2'><span class='material-symbols-outlined text-primary text-[20px] mt-0.5'>check_circle</span><span>Significant cost reduction vs. traditional modeling</span></li></ul><p class='text-slate-600 leading-relaxed'>Perfect for fashion brands, clothing lines, and e-commerce platforms looking to reduce costs while maintaining high-quality visual content.</p>"
 data-service-tags='["AI Models", "Virtual Try-On", "Cost-Effective", "Scalable"]'>
-<div class="relative w-full h-48 mb-8 rounded-2xl overflow-hidden bg-slate-50 border border-slate-100">
+<div class="relative w-full mb-8 rounded-2xl overflow-hidden bg-slate-50 border border-slate-100" style="aspect-ratio: 1/1;">
 <img alt="AI Fashion Models" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9P2mfIXpUriZ0y9zBCmdoLRbtWBTLO6_OoyB714KNLMPhofdUF2Q9TAv96IwVRThOPd71Y7ceq2bJAz6IfHe2Ecjl-bIvgPHJRyMR5wT80bmys3EzWqFb66DvjZwbSwIGz0ecPlx4SwWZdAb4ck23aa9TtGu4ev7B-mJOk3nC19EFeIX79gkI9N6K_FEvpjSbSiAz1FV60CrPsCsao2oJiAYCvtPqJMwh3957NWJc0hzO5f4nx3F3XuBQwWoeiD2F7bxewZFZdGG0"/>
 </div>
 <h3 class="text-xl font-bold text-slate-900 mb-3">AI Fashion Models</h3>
@@ -268,7 +269,7 @@ data-service-title="Model to Video"
 data-service-image="https://lh3.googleusercontent.com/aida-public/AB6AXuA9P2mfIXpUriZ0y9zBCmdoLRbtWBTLO6_OoyB714KNLMPhofdUF2Q9TAv96IwVRThOPd71Y7ceq2bJAz6IfHe2Ecjl-bIvgPHJRyMR5wT80bmys3EzWqFb66DvjZwbSwIGz0ecPlx4SwWZdAb4ck23aa9TtGu4ev7B-mJOk3nC19EFeIX79gkI9N6K_FEvpjSbSiAz1FV60CrPsCsao2oJiAYCvtPqJMwh3957NWJc0hzO5f4nx3F3XuBQwWoeiD2F7bxewZFZdGG0"
 data-service-description="<h3 class='text-xl font-bold text-slate-900 mb-4'>Static to Dynamic: Model to Video Conversion</h3><p class='text-slate-600 leading-relaxed mb-4'>Bring your fashion imagery to life with our Model to Video service. We transform static model photos into engaging, professional video assets for social media and marketing campaigns.</p><h4 class='text-lg font-bold text-slate-900 mb-3'>What We Create:</h4><ul class='space-y-2 mb-6'><li class='flex items-start gap-2'><span class='material-symbols-outlined text-primary text-[20px] mt-0.5'>check_circle</span><span>Smooth 360-degree rotation videos</span></li><li class='flex items-start gap-2'><span class='material-symbols-outlined text-primary text-[20px] mt-0.5'>check_circle</span><span>Cinematic motion graphics and transitions</span></li><li class='flex items-start gap-2'><span class='material-symbols-outlined text-primary text-[20px] mt-0.5'>check_circle</span><span>Fabric movement simulation</span></li><li class='flex items-start gap-2'><span class='material-symbols-outlined text-primary text-[20px] mt-0.5'>check_circle</span><span>Social media optimized formats (IG Reels, TikTok)</span></li><li class='flex items-start gap-2'><span class='material-symbols-outlined text-primary text-[20px] mt-0.5'>check_circle</span><span>Brand-consistent styling and music</span></li></ul><p class='text-slate-600 leading-relaxed'>Ideal for social media campaigns, digital marketing, and e-commerce product showcases that need to stand out in a crowded marketplace.</p>"
 data-service-tags='["Video", "Motion Graphics", "Social Media", "360°"]'>
-<div class="relative w-full h-48 mb-8 rounded-2xl overflow-hidden bg-slate-50 border border-slate-100">
+<div class="relative w-full mb-8 rounded-2xl overflow-hidden bg-slate-50 border border-slate-100" style="aspect-ratio: 1/1;">
 <img alt="Model to Video" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9P2mfIXpUriZ0y9zBCmdoLRbtWBTLO6_OoyB714KNLMPhofdUF2Q9TAv96IwVRThOPd71Y7ceq2bJAz6IfHe2Ecjl-bIvgPHJRyMR5wT80bmys3EzWqFb66DvjZwbSwIGz0ecPlx4SwWZdAb4ck23aa9TtGu4ev7B-mJOk3nC19EFeIX79gkI9N6K_FEvpjSbSiAz1FV60CrPsCsao2oJiAYCvtPqJMwh3957NWJc0hzO5f4nx3F3XuBQwWoeiD2F7bxewZFZdGG0"/>
 <div class="absolute inset-0 flex items-center justify-center bg-black/10 group-hover:bg-transparent transition-all">
 <span class="material-symbols-outlined text-white text-4xl drop-shadow-lg">play_circle</span>
@@ -287,7 +288,7 @@ data-service-title="Full Pipeline"
 data-service-image="https://lh3.googleusercontent.com/aida-public/AB6AXuB5Ywvb1o6l-w0T04OtjmW4kIHtn7k8xJ_LfMf7AjypUm-aG53aumAPisO5yVlDtR7qhAbrrTu1f55tt1kvxKFFaLr4SNEMyAD3HkM4_KnDHQh8BzFc_02KUaki9Q1chAkRvouCnH4N933AxAIuVYyWQDfhagC9yvFtO5TK2oRZ3igyo0VRtmrrJCncPoBZ9FEWsQHqUCJM4ObLxKE4siiPVy2v4NGwnfmtncexketqTahp_tptXJk4nbhrvTdl8tmWhQYoTlqkD_bl"
 data-service-description="<h3 class='text-xl font-bold text-slate-900 mb-4'>End-to-End Fashion Production Pipeline</h3><p class='text-slate-600 leading-relaxed mb-4'>Our comprehensive Full Pipeline service handles everything from flat cloth to fully produced model videos. We manage the entire production process, saving you time and ensuring consistency.</p><h4 class='text-lg font-bold text-slate-900 mb-3'>Complete Workflow Includes:</h4><ul class='space-y-2 mb-6'><li class='flex items-start gap-2'><span class='material-symbols-outlined text-primary text-[20px] mt-0.5'>check_circle</span><span>Flat cloth photography and preparation</span></li><li class='flex items-start gap-2'><span class='material-symbols-outlined text-primary text-[20px] mt-0.5'>check_circle</span><span>Ghost Mannequin effect creation</span></li><li class='flex items-start gap-2'><span class='material-symbols-outlined text-primary text-[20px] mt-0.5'>check_circle</span><span>AI model generation and placement</span></li><li class='flex items-start gap-2'><span class='material-symbols-outlined text-primary text-[20px] mt-0.5'>check_circle</span><span>Video production and motion graphics</span></li><li class='flex items-start gap-2'><span class='material-symbols-outlined text-primary text-[20px] mt-0.5'>check_circle</span><span>Quality assurance and delivery management</span></li></ul><p class='text-slate-600 leading-relaxed'>Perfect for fashion brands needing a complete solution from raw materials to market-ready visual assets. Dedicated project manager included.</p>"
 data-service-tags='["End-to-End", "Full Service", "Project Management", "Quality Assured"]'>
-<div class="relative w-full h-48 mb-8 rounded-2xl overflow-hidden bg-slate-50 border border-slate-100">
+<div class="relative w-full mb-8 rounded-2xl overflow-hidden bg-slate-50 border border-slate-100" style="aspect-ratio: 1/1;">
 <img alt="Full Pipeline" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5Ywvb1o6l-w0T04OtjmW4kIHtn7k8xJ_LfMf7AjypUm-aG53aumAPisO5yVlDtR7qhAbrrTu1f55tt1kvxKFFaLr4SNEMyAD3HkM4_KnDHQh8BzFc_02KUaki9Q1chAkRvouCnH4N933AxAIuVYyWQDfhagC9yvFtO5TK2oRZ3igyo0VRtmrrJCncPoBZ9FEWsQHqUCJM4ObLxKE4siiPVy2v4NGwnfmtncexketqTahp_tptXJk4nbhrvTdl8tmWhQYoTlqkD_bl"/>
 <div class="absolute bottom-4 left-4 flex gap-2">
 <span class="bg-primary/90 backdrop-blur px-2 py-1 rounded text-[10px] font-bold text-white uppercase tracking-tighter">End-to-End</span>
@@ -970,49 +971,36 @@ data-project-videos='[]'>
 <script>
     // ==================== Hero Slider Functionality ====================
     
-    // Multiple before-and-after image pairs
-    const imagePairs = [
-        {
-            before: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAkS6chT4s3gJBu7oVfOQrIc0LcQeKDIpXiH_1KbPm67WoqbXPm8bCOGe2iB9RbjAglRmf-rOU2N795erAtB7oAZpQIPz8f5DhJMCP35gW1o9AI4pXvKuTPeto3inmlKNA3jinWpRlAWBfhfXvz3moovKvl4-IDHlgt1Umb2ps0WK-DDB_DxJGTHYtPhRI91DF-cvJPF5EuO-z-r6kzG_IgHEqsfkePc-WUeKP-fzYxgjHWPfJZftzj6pRegAZ1RjwbawLpPXINIo1A',
-            after: 'https://lh3.googleusercontent.com/aida-public/AB6AXuA9P2mfIXpUriZ0y9zBCmdoLRbtWBTLO6_OoyB714KNLMPhofdUF2Q9TAv96IwVRThOPd71Y7ceq2bJAz6IfHe2Ecjl-bIvgPHJRyMR5wT80bmys3EzWqFb66DvjZwbSwIGz0ecPlx4SwWZdAb4ck23aa9TtGu4ev7B-mJOk3nC19EFeIX79gkI9N6K_FEvpjSbSiAz1FV60CrPsCsao2oJiAYCvtPqJMwh3957NWJc0hzO5f4nx3F3XuBQwWoeiD2F7bxewZFZdGG0'
-        },
-        {
-            before: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCGoBHxjD60S-cknZSEoWx7BeIDsk_VbadO7FFrkUYyvQ5wBEcUz7gugh7cgWre-x4mD5e7m1F3vD4k8DlJRdaoaIMSqkJ3NLbhwhsn-lCeSRz9T_Cwl1YnGcMgNJUGlxfRyTUs8UeG0sZdRP2WHeAivEq9ip1eL2ot2svnZo5bWXHLAx4TnfU6BTx_B01flznH0ri2LcfRn97-wkTWkmQ17rriJfK6-vIWlh-MlJAZMPgEG2HjljMh6DnWnowYZRSe7my_PxV6Y020',
-            after: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBMktwpgzMtOm_vzpd354vslKkcOlnwZI7zi2d3oIkPCPUin6ieqpzsYipYOYScO-YGxHklq0IZTqCLfqeS2cGkBMD5tX77JamjTRTg9BHNQufrELarq5lgDckUimtzl-bWEm1dMttBJVk1yGqZiYxXsYUf2NSfzEwVv5evzCXDIH6ardqeJFJsHQRwW0XSjZXupLZyvHInogIV3CfsCxrOhytA-mCND7vhjR31uESQpTtmZ8U-zLodBdqTLAlpyjdR5eF2pwNS5lq0'
-        },
-        {
-            before: 'https://lh3.googleusercontent.com/aida-public/AB6AXuA9P2mfIXpUriZ0y9zBCmdoLRbtWBTLO6_OoyB714KNLMPhofdUF2Q9TAv96IwVRThOPd71Y7ceq2bJAz6IfHe2Ecjl-bIvgPHJRyMR5wT80bmys3EzWqFb66DvjZwbSwIGz0ecPlx4SwWZdAb4ck23aa9TtGu4ev7B-mJOk3nC19EFeIX79gkI9N6K_FEvpjSbSiAz1FV60CrPsCsao2oJiAYCvtPqJMwh3957NWJc0hzO5f4nx3F3XuBQwWoeiD2F7bxewZFZdGG0',
-            after: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAIFbdYHW95RcPtqGVJ0q_8DnEnXW2WmvTiDC_fq1NNizhlWTuw2fnW7t-XqtvsiMZzF6vbfDD8x1jHOsOwRBz_qKZVyJQaQtyXc8UdaBJ343d4iPFdtC-biIhrhI3IidoGDlHjkiLwUCZF0VhM2kDqk00X2NlUKEh-wBDJJy94jcnGo9so0wLvqAWLmg6ZJe7Y0vA99wFNKDhYzsi4U0sM8QR-GQooeW_q3cx3RLptzQUjCljLgk-ZUUYQowVIvc5MS_iMrfEcdLd9'
-        }
+    // Image gallery for slider
+    const images = [
+        'https://lh3.googleusercontent.com/aida-public/AB6AXuA9P2mfIXpUriZ0y9zBCmdoLRbtWBTLO6_OoyB714KNLMPhofdUF2Q9TAv96IwVRThOPd71Y7ceq2bJAz6IfHe2Ecjl-bIvgPHJRyMR5wT80bmys3EzWqFb66DvjZwbSwIGz0ecPlx4SwWZdAb4ck23aa9TtGu4ev7B-mJOk3nC19EFeIX79gkI9N6K_FEvpjSbSiAz1FV60CrPsCsao2oJiAYCvtPqJMwh3957NWJc0hzO5f4nx3F3XuBQwWoeiD2F7bxewZFZdGG0',
+        'https://lh3.googleusercontent.com/aida-public/AB6AXuBMktwpgzMtOm_vzpd354vslKkcOlnwZI7zi2d3oIkPCPUin6ieqpzsYipYOYScO-YGxHklq0IZTqCLfqeS2cGkBMD5tX77JamjTRTg9BHNQufrELarq5lgDckUimtzl-bWEm1dMttBJVk1yGqZiYxXsYUf2NSfzEwVv5evzCXDIH6ardqeJFJsHQRwW0XSjZXupLZyvHInogIV3CfsCxrOhytA-mCND7vhjR31uESQpTtmZ8U-zLodBdqTLAlpyjdR5eF2pwNS5lq0',
+        'https://lh3.googleusercontent.com/aida-public/AB6AXuAIFbdYHW95RcPtqGVJ0q_8DnEnXW2WmvTiDC_fq1NNizhlWTuw2fnW7t-XqtvsiMZzF6vbfDD8x1jHOsOwRBz_qKZVyJQaQtyXc8UdaBJ343d4iPFdtC-biIhrhI3IidoGDlHjkiLwUCZF0VhM2kDqk00X2NlUKEh-wBDJJy94jcnGo9so0wLvqAWLmg6ZJe7Y0vA99wFNKDhYzsi4U0sM8QR-GQooeW_q3cx3RLptzQUjCljLgk-ZUUYQowVIvc5MS_iMrfEcdLd9'
     ];
 
     let currentSlide = 0;
-    let sliderPosition = 50; // 50% = middle
     let isTransitioning = false;
     const slideInterval = 5000; // 5 seconds per slide
     let autoCycleTimer;
-    
+
     // DOM elements (will be initialized after DOM loads)
-    let afterImage, beforeImage, beforeContainer, sliderHandle, sliderContainer, slideIndicators;
+    let mainImage, sliderContainer, slideIndicators;
 
     // Initialize
     function initHeroSlider() {
         // Get DOM elements
-        afterImage = document.getElementById('after-image');
-        beforeImage = document.getElementById('before-image');
-        beforeContainer = document.getElementById('before-container');
-        sliderHandle = document.getElementById('slider-handle');
+        mainImage = document.getElementById('main-image');
         sliderContainer = document.getElementById('slider-container');
         slideIndicators = document.getElementById('slide-indicators');
-        
+
         // Verify elements exist
-        if (!afterImage || !beforeImage || !beforeContainer || !sliderHandle || !sliderContainer || !slideIndicators) {
+        if (!mainImage || !sliderContainer || !slideIndicators) {
             console.error('Hero slider elements not found');
             return;
         }
-        
+
         // Create slide indicators
-        imagePairs.forEach((_, index) => {
+        images.forEach((_, index) => {
             const indicator = document.createElement('button');
             indicator.className = `w-2 h-2 rounded-full transition-all duration-300 ${index === 0 ? 'bg-white w-6' : 'bg-white/50'}`;
             indicator.setAttribute('aria-label', `Slide ${index + 1}`);
@@ -1020,14 +1008,11 @@ data-project-videos='[]'>
             slideIndicators.appendChild(indicator);
         });
 
-        // Set initial images
+        // Set initial image
         updateImages(0);
 
         // Start auto-cycle
         startAutoCycle();
-
-        // Slider drag functionality
-        setupSliderDrag();
     }
 
     // Update images with transition
@@ -1036,17 +1021,14 @@ data-project-videos='[]'>
         isTransitioning = true;
 
         // Fade out
-        afterImage.style.opacity = '0';
-        beforeImage.style.opacity = '0';
+        mainImage.style.opacity = '0';
 
         setTimeout(() => {
-            // Update images
-            afterImage.style.backgroundImage = `url('${imagePairs[slideIndex].after}')`;
-            beforeImage.firstElementChild.style.backgroundImage = `url('${imagePairs[slideIndex].before}')`;
+            // Update image
+            mainImage.style.backgroundImage = `url('${images[slideIndex]}')`;
 
             // Fade in
-            afterImage.style.opacity = '1';
-            beforeImage.style.opacity = '1';
+            mainImage.style.opacity = '1';
 
             // Update indicators
             updateIndicators(slideIndex);
@@ -1078,7 +1060,7 @@ data-project-videos='[]'>
     // Next slide
     function nextSlide() {
         if (isTransitioning) return;
-        currentSlide = (currentSlide + 1) % imagePairs.length;
+        currentSlide = (currentSlide + 1) % images.length;
         updateImages(currentSlide);
     }
 
@@ -1091,60 +1073,6 @@ data-project-videos='[]'>
     function resetAutoCycle() {
         clearInterval(autoCycleTimer);
         startAutoCycle();
-    }
-
-    // Slider drag functionality
-    function setupSliderDrag() {
-        let isDragging = false;
-
-        const updateSlider = (clientX) => {
-            const rect = sliderContainer.getBoundingClientRect();
-            const position = ((clientX - rect.left) / rect.width) * 100;
-            sliderPosition = Math.max(0, Math.min(100, position));
-            beforeContainer.style.width = `${sliderPosition}%`;
-            sliderHandle.style.left = `${sliderPosition}%`;
-        };
-
-        const handleMouseDown = (e) => {
-            isDragging = true;
-            updateSlider(e.clientX);
-            document.addEventListener('mousemove', handleMouseMove);
-            document.addEventListener('mouseup', handleMouseUp);
-        };
-
-        const handleMouseMove = (e) => {
-            if (!isDragging) return;
-            updateSlider(e.clientX);
-        };
-
-        const handleMouseUp = () => {
-            isDragging = false;
-            document.removeEventListener('mousemove', handleMouseMove);
-            document.removeEventListener('mouseup', handleMouseUp);
-        };
-
-        // Touch support
-        const handleTouchStart = (e) => {
-            isDragging = true;
-            updateSlider(e.touches[0].clientX);
-        };
-
-        const handleTouchMove = (e) => {
-            if (!isDragging) return;
-            e.preventDefault();
-            updateSlider(e.touches[0].clientX);
-        };
-
-        const handleTouchEnd = () => {
-            isDragging = false;
-        };
-
-        sliderHandle.addEventListener('mousedown', handleMouseDown);
-        sliderContainer.addEventListener('mousedown', handleMouseDown);
-        sliderHandle.addEventListener('touchstart', handleTouchStart, { passive: true });
-        sliderContainer.addEventListener('touchstart', handleTouchStart, { passive: true });
-        sliderContainer.addEventListener('touchmove', handleTouchMove, { passive: false });
-        sliderContainer.addEventListener('touchend', handleTouchEnd);
     }
 
     // ==================== Portfolio Filtering Functionality ====================
